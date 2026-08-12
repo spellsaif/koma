@@ -1,0 +1,38 @@
+{
+    "name": "koma-orm",
+    "version": "0.1.0",
+    "description": "Koma - Don't hide SQL. Don't make me write all of it either.",
+    "license": "MIT",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        },
+        "./dialects/postgres": "./dist/dialects/postgres.js",
+        "./dialects/mysql": "./dist/dialects/mysql.js",
+        "./dialects/sqlite": "./dist/dialects/sqlite.js",
+        "./migrate": "./dist/migrate.js"
+    },
+
+    "files": ["dist"],
+    "sideEffects":false,
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "test": "vitest run",
+        "typecheck": "tsc --noEmit"
+    },
+
+    "keywords": ["orm", "typescript", "sql", "postgres", "mysql", "sqlite", "type-safe", "edge"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/spellsaif/koma.git"
+    },
+    "publishConfig": { "access": "public" }
+
+}

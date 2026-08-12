@@ -1,0 +1,32 @@
+{
+  "name": "koma",
+  "version": "0.0.0",
+  "private": "true",
+  "description": "Koma - Don't hide SQL. Don't make me write all of it either.",
+  "engines": {"node": ">=20"},
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "test": "turbo run test",
+    "lint": "biome check",
+    "format": "biome format --write .",
+    "typecheck": "turbo run typecheck",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "turbo run build && changeset publish"
+  },
+  "keywords": ["typesafe", "orm"],
+  "author": "Nanasi",
+  "license": "MIT",
+  "packageManager": "pnpm@10.33.2",
+
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "@changesets/cli": "^2.28.0",
+    "@types/node": "^22.10.0",
+    "tsup": "^8.5.1",
+    "turbo": "^2.4.0",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.0"
+  }
+}
